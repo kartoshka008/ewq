@@ -1,0 +1,71 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "weather weather weather weather"
+      "input input input button"
+      "output output output output";
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,202,255,1) 100%);
+  }
+  
+  .weather {
+    grid-area: Weather;
+  }
+  .input { grid-area: input; }
+  .button { grid-area: button; }
+  .output { grid-area: output; }
+
+  
+.css-input {
+    max-width: 800px;
+    min-width: 400px;
+    padding: 20px;
+    font-size: 25px;
+    border-width: 1px;
+    border-color: #154682;
+    background-color: #007dc1;
+    color: #ffffff;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 0px 30px rgba(29,145,209,.75);
+    text-shadow: -8px 0px 30px rgba(255,255,255,.100);
+}
+.css-input:focus {
+    outline:none;
+}
+  
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: cornsilk;
+    text-align: center;
+}
+
+
+.myButton {
+	box-shadow: 0px -5px 50px 5px #54a3f7;
+	background-color:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(72,103,163,1) 100%);
+	border-radius:42px;
+    border:1px solid #154682;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:21px;
+	font-weight:bold;
+	padding:32px 56px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
