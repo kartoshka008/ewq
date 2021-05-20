@@ -1,0 +1,17 @@
+from pyowm import OWM
+from pyowm.utils import config
+from pyowm.utils import timestamps
+import eel
+
+owm = OWM('ade1037145de9cab685766b9c938c1bb')
+@eel.expose
+def getweather(place):
+    mgr = owm.weather_manager()
+
+    observation = mgr.weather_at_place(place)
+    w = observation.weather
+    temp = (w.temperature('celsius')['temp'])
+    return "В городе" + place + "сейчас" + temp
+eel.init("web")
+eel.start("weather.html", size = (700 , 800))
+
