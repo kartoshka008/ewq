@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="eel.js"></script>
+    <link rel="stylesheet" href='pogoda.css'>
+    <meta charset="UTF-8">
+<style>
+</style>     
+</head>
+<body>
+      <div class="grid-container">
+        <div class="weather"><h1 class="fontx">Приложение "Погода"</h1></div>
+        <div class="input"><input id="location" type="text" class="css-input" value="москва"/></div>
+        <div class="button"><button id="click" class="myButton">найти</button></div>
+        <div id="info" class="output"></div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    async function display_weather(){
+        let place = document.getElementById('location').value;
+
+        let res = await eel.get_weather(place)();
+        document.getElementById('info').innerHTML = res;
+        }
+        jQuery('#click').on('click',function(){
+            //
+            display_weather();
+        });
+    </script>
+</body>
+</html>
